@@ -17,27 +17,28 @@ The source code that you are given is a very simple imitation of a name/value st
 * The solution should have a better response time than that one of distributed cache for a frequently requested item.
 * The solution should have unit tests for all new functionality.
 * The user of the `IDataStore` interface must not have to deal with thread synchronisation.
-* The database should be populated with the following data on startup:
-
+* The database should be populated with the following data on startup:  
+<pre>
     | key          | value         |
-	--------------------------------
+    --------------------------------
     | key0         | value0        |
-	| key1         | value1        |
-	| key2         | value2        |
-	| key3         | value3        |
-	| key4         | value4        |
-	| key5         | value5        |
-	| key6         | value6        |
-	| key7         | value7        |
-	| key8         | value8        |
-	| key9         | value9        |
-
+    | key1         | value1        |
+    | key2         | value2        |
+    | key3         | value3        |
+    | key4         | value4        |
+    | key5         | value5        |
+    | key6         | value6        |
+    | key7         | value7        |
+    | key8         | value8        |
+    | key9         | value9        |
+</pre>
 * The solution must have 10 threads each making 50 consecutive requests for a random key in the range (key0-key9). I.e. there would a total of 500 requests.
-* The solution must print the managed ThreadId, requested key name, returned value, time to complete that request, similar to the following example:
+* The solution must print the managed ThreadId, requested key name, returned value, time to complete that request, similar to the following example:  
+<pre>
+    [1] Request 'key1', response 'value1', time: 50.05 ms
+    [2] Request 'key2', response 'value2', time: 50.05 ms
+</pre>
 
-   [1] Request 'key1', response 'value1', time: 50.05 ms
-   [2] Request 'key2', response 'value2', time: 50.05 ms
-  
 ## Submission instructions
 * The whole Visual Studio solution must build with no errors.
 * Submission must include all the source files and a compiled executable in a zip/rar file - submitted to your agent or nearmap contact.
